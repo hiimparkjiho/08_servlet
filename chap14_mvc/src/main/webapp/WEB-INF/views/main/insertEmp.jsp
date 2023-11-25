@@ -68,5 +68,13 @@
         사원번호: <input type="text" name="empId" />
         <input type="submit" value="등록하기" />
     </form>
+
+    <h3>퇴사자 삭제</h3>
+    <form action="${pageContext.servletContext.contextPath}/employeesDelete" method="post">
+        직원번호: <input type="text" name="empId" /><br>
+        직원명: <input type="text" name="empName" /><br>
+        <input type="submit" value="삭제" />
+    </form>
+
 </body>
 </html>

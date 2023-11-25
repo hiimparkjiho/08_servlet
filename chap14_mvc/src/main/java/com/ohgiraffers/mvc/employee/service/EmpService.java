@@ -52,4 +52,19 @@ public class EmpService {
 
         return result;
     }
+
+    public int delete(EmpDTO empDTO){
+        SqlSession session = getSession();
+        empMapper = session.getMapper(EmpMapper.class);
+
+        int result = empMapper.delete(empDTO);
+        if(result <= 0){
+            session.rollback();
+        }else{
+            session.commit();
+        }
+        session.close();
+
+        return result;
+    }
 }

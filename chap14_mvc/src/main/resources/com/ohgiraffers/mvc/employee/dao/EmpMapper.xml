@@ -63,4 +63,10 @@
             'Y'
         )
     </insert>
+
+    <delete id="delete" parameterType="com.ohgiraffers.mvc.employee.dto.EmpDTO">
+        DELETE FROM employee
+        WHERE EMP_ID = #{empId}
+        AND EMP_NAME = #{empName}
+    </delete>
 </mapper>

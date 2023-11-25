@@ -31,4 +31,6 @@ public interface EmpMapper {
     List<EmpDTO> selectAllEmp();
 
     int insert(EmpInsertDTO insert);
+
+    int delete(EmpDTO empDTO);
 }
