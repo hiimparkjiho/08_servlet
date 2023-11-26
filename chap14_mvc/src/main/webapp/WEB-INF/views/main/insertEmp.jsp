@@ -76,5 +76,13 @@
         <input type="submit" value="삭제" />
     </form>
 
+    <h3>직원 정보 수정</h3>
+    <form action="${pageContext.servletContext.contextPath}/employees/update" method="post">
+        수정해야 하는 직원의 직원 코드: <input type="text" name="empId"> <br>
+        수정할 직원이름: <input type="text" name="empName"><br>
+        이메일: <input type="text" name="email"><br>
+        전화번호: <input type="text" name="phone"><br>
+        <input type="submit" value="수정" />
+    </form>
 </body>
 </html>

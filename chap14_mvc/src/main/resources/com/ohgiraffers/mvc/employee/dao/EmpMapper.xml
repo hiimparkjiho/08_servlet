@@ -69,4 +69,12 @@
         WHERE EMP_ID = #{empId}
         AND EMP_NAME = #{empName}
     </delete>
+
+    <update id="update" parameterType="com.ohgiraffers.mvc.employee.dto.EmpDTO">
+        UPDATE employee
+        SET EMP_NAME = #{empName},
+        EMAIL = #{email},
+        PHONE = #{phone}
+        WHERE EMP_ID = #{empId}
+    </update>
 </mapper>

@@ -67,4 +67,18 @@ public class EmpService {
 
         return result;
     }
+
+    public int update(EmpDTO empDTO){
+        SqlSession session = getSession();
+        empMapper = session.getMapper(EmpMapper.class);
+
+        int result = empMapper.update(empDTO);
+        if(result <= 0){
+            session.rollback();
+        }else{
+            session.commit();
+        }
+        session.close();
+        return result;
+    }
 }

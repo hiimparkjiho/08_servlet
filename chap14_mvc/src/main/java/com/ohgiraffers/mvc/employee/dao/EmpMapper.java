@@ -33,4 +33,6 @@ public interface EmpMapper {
     int insert(EmpInsertDTO insert);
 
     int delete(EmpDTO empDTO);
+
+    int update(EmpDTO empDTO);
 }
